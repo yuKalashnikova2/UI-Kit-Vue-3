@@ -1,7 +1,16 @@
-<script setup></script>
+<script setup>
+import Header from '@/components/layout/Header.vue'
+</script>
 
 <template>
-  <router-view></router-view>
+
+  <div class="container">
+      <Header></Header>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+  </div>
+
 
 </template>
 
@@ -10,6 +19,16 @@
 
 #app {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  max-width: 1400px;
+  margin-left: 250px;
+  padding: 30px;
+  transition: 0.2s;
+  &_full {
+    margin-left: 0;
+  }
 }
 
 </style>
