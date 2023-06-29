@@ -1,11 +1,14 @@
 <script setup>
 import Header from '@/components/layout/Header.vue'
+import SideBar from './components/layout/SideBar.vue';
 </script>
 
 <template>
 
   <div class="container">
+   
       <Header></Header>
+      <SideBar></SideBar>
     <div class="content">
       <router-view></router-view>
     </div>
