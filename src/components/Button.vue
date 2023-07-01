@@ -24,6 +24,10 @@ const props = defineProps({
     type: String,
     required: false,
   },
+  size: {
+    type: String,
+    default: 'normal'
+  },
 })
 </script>
 
@@ -35,6 +39,7 @@ const props = defineProps({
         `btn_${color}`,
         { btn_rounded: rounded },
         { btn_outlined: outlined },
+        `btn_${size}`
       ]"
       :disabled="disabled"
     >

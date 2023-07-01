@@ -48,6 +48,12 @@ import Button from '../components/Button.vue'
     <Button color="warning" icon="lemon" />
     <Button color="danger" icon="hourglass" />
   </div>
+
+  <h2>Size</h2>
+  <div class="line">
+    <Button label="Normal" />
+    <Button label="Large" size="large"/>
+  </div>
 </template>
 
 <style lang="scss" scoped>
