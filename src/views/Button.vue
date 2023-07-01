@@ -38,6 +38,16 @@ import Button from '../components/Button.vue'
     <Button label="Warning" color="warning" outlined />
     <Button label="Danger" color="danger" outlined />
   </div>
+
+  <h2>Icons</h2>
+  <div class="line">
+    <Button color="primary" icon="heart" />
+    <Button color="second" icon="hand" outlined />
+    <Button color="success" icon="address-book" />
+    <Button color="info" icon="credit-card" />
+    <Button color="warning" icon="lemon" />
+    <Button color="danger" icon="hourglass" />
+  </div>
 </template>
 
 <style lang="scss" scoped>

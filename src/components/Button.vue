@@ -20,6 +20,10 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  icon: {
+    type: String,
+    required: false,
+  },
 })
 </script>
 
@@ -34,7 +38,10 @@ const props = defineProps({
       ]"
       :disabled="disabled"
     >
-      {{ label }}
+      <span v-if="icon">
+        <font-awesome-icon :icon="`fa-regular fa-${icon}`"></font-awesome-icon>
+      </span>
+      <span v-else>{{ label }}</span>
     </button>
   </div>
 </template>
