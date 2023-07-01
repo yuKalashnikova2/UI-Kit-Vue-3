@@ -1,5 +1,9 @@
 <script setup>
 import Button from '../components/Button.vue'
+
+const onClick = () => {
+    alert('Вы нажали кнопку danger!')
+}
 </script>
 <template>
   <h1 class="heading-1">Button</h1>
@@ -53,6 +57,11 @@ import Button from '../components/Button.vue'
   <div class="line">
     <Button label="Normal" />
     <Button label="Large" size="large"/>
+  </div>
+
+  <h2>Events</h2>
+  <div class="line">
+    <Button label="@click" color="danger" @click="onClick"/>
   </div>
 </template>
 

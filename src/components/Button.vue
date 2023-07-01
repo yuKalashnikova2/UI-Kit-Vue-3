@@ -29,6 +29,13 @@ const props = defineProps({
     default: 'normal'
   },
 })
+
+const emit = defineEmits(['click'])
+
+const addEventClick = () => {
+    emit('click')
+}
+
 </script>
 
 <template>
@@ -42,6 +49,7 @@ const props = defineProps({
         `btn_${size}`
       ]"
       :disabled="disabled"
+      @click="addEventClick"
     >
       <span v-if="icon">
         <font-awesome-icon :icon="`fa-regular fa-${icon}`"></font-awesome-icon>
