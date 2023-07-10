@@ -5,6 +5,7 @@ import Button from '@/views/Button.vue'
 import Checkbox from '@/views/Checkbox.vue'
 import Modal from '@/views/Modal.vue'
 import Radio from '@/views/Radio.vue'
+import Progress from '@/views/Progress.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -38,6 +39,11 @@ const router = createRouter({
             path: '/radio',
             name: 'Radio',
             component: Radio
+        },
+        {
+            path: '/progress',
+            name: 'Progress',
+            component: Progress
         }
     ]
 })

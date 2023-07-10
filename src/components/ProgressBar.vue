@@ -1,0 +1,56 @@
+<script setup>
+const props = defineProps({
+  maxWidth: {
+    type: String,
+    default: '300px',
+  },
+  percent: {
+    type: Number,
+    required: true,
+  },
+  color: {
+    type: String,
+    default: 'primary',
+  },
+})
+</script>
+<template>
+  <h2>Привет всем, я прогресс бар</h2>
+
+  <div class="progress-container" :style="[{ 'max-width': maxWidth }]">
+    <span class="progress-percent" :style="[{ color: `var(--${color})` }]"
+      >{{ percent }}%</span
+    >
+    <div class="progress" :style="[{ background: `var(--${color}-hover)` }]">
+      <div
+        class="progress-bar"
+        :style="[{ width: `${percent}%` }, { background: `var(--${color})` }]"
+      ></div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss">
+.progress {
+  height: 10px;
+  border-radius: 4px;
+  background-color: var(--primary-hover);
+  &-container {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  &-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+  &-percent {
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
+</style>
