@@ -4,6 +4,7 @@ import Typography from '@/views/Typography.vue'
 import Button from '@/views/Button.vue'
 import Checkbox from '@/views/Checkbox.vue'
 import Modal from '@/views/Modal.vue'
+import Radio from '@/views/Radio.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -32,6 +33,11 @@ const router = createRouter({
             path: '/modal',
             name: 'Modal',
             component: Modal
+        },
+        {
+            path: '/radio',
+            name: 'Radio',
+            component: Radio
         }
     ]
 })
