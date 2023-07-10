@@ -122,7 +122,7 @@ const addEventClick = () => {
   }
   &_outlined {
     background: transparent;
-    color: #000;
+    color: var(--info-text);
     &:hover {
       color: #fff;
     }

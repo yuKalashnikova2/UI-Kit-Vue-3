@@ -6,6 +6,7 @@
     --success: #6666FF;
     --success-hover:  #abc5f9;
     --info: #0084F4;
+    --info-text:#666666;
     --info-hover: #66B5F8;
     --warning: #FFA26B;
     --warning-hover: #FFC7A6;
@@ -20,11 +21,16 @@
 body {
     background: #fafafa;
     margin: 0;
+    color:var(--info-text) 
 }
 
 a {
     color: var(--primary);
     text-decoration: none;
+}
+
+h1 {
+    color: var(--info)
 }
 
 .line {

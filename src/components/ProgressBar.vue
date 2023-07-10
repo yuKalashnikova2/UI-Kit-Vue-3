@@ -15,7 +15,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <h2>Привет всем, я прогресс бар</h2>
+  <h2>Hi there! I'm ProgressBar</h2>
 
   <div class="progress-container" :style="[{ 'max-width': maxWidth }]">
     <span class="progress-percent" :style="[{ color: `var(--${color})` }]"
