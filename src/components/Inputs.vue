@@ -1,69 +1,65 @@
 <script setup>
-
 const emit = defineEmits(['update:value'])
 const props = defineProps({
   error: {
     type: Array,
-    required: false
+    required: false,
   },
-    type: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    
-    value: {
-        type: String,
-        default: ''
-    },
-    placeholder: {
-        type: String,
-        required: true
-    },
-    label: {
-        type: String,
-        required: true
-    },
-    width: {
-        type: String,
-        default: '100px'
-    }
+  type: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+
+  value: {
+    type: String,
+    default: '',
+  },
+  placeholder: {
+    type: String,
+    required: true,
+  },
+  label: {
+    type: String,
+    required: true,
+  },
+  width: {
+    type: String,
+    default: '100px',
+  },
 })
 
 const updateInputValue = (event) => {
-    emit('update:value', event.target.value)
+  emit('update:value', event.target.value)
 }
 </script>
 <template>
-    <h2>Hi there! I'm input</h2>
-    <div class="form-input">
-        <input
-        class="input-text"
-        :type="type"
-        :name="name"
-        :value="value"
-        :placeholder="placeholder"
-        @input="updateInputValue"
-         />
-         <label :for="name" class="input-label">{{label}}</label>
-         <TransitionGroup>
-            <div class="form-error" v-for="el of error" 
-            :key="el.$uid">
-            <div class="form-error_message">
-              {{ el.$message }}
-            </div>
-</div>
-         </TransitionGroup>
-    
-    </div>
+  <div class="form-input">
+    <input
+      class="input-text"
+      :type="type"
+      :name="name"
+      :value="value"
+      :placeholder="placeholder"
+      @input="updateInputValue"
+    />
+    <label :for="name" class="input-label">{{ label }}</label>
+    <TransitionGroup>
+      <div class="form-error" v-for="el of error" :key="el.$uid">
+        <div class="form-error_message">
+          {{ el.$message }}
+        </div>
+      </div>
+    </TransitionGroup>
+  </div>
 </template>
 
 <style lang="scss">
 h2 {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 .form {
   &-input {
@@ -81,14 +77,14 @@ h2 {
 }
 .input {
   &-text {
-  border: 1px solid var(--primary);
-  padding: 0 10px;
-  height: 40px;
-  border-radius: 7px;
-  font-size: 15px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
+    border: 1px solid var(--primary);
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
     &:focus {
       & + .input-label {
         z-index: 1;
@@ -111,7 +107,7 @@ h2 {
     top: 20px;
     opacity: 0;
     z-index: -1;
-    transition: .3s;
+    transition: 0.3s;
     font-size: 13px;
     color: var(--primary);
   }
