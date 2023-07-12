@@ -16,7 +16,7 @@ const clickOnTab = (tabName) => {
 }
 </script>
 <template>
-  <h2>Я Табс</h2>
+  <h2>Hi there! I'm Tabs</h2>
 
   <div class="tab-nav">
     <span
