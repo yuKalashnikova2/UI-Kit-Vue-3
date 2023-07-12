@@ -8,6 +8,7 @@ const isShow = ref(false)
 
 <template>
   <h1>Modal</h1>
+  <h2>Hi there! I'm Modal. Push button show me!</h2>
   <Button label="Show modal" @click="isShow = !isShow"></Button>
   <Modal :show="isShow" @close="isShow = false">Some content is here</Modal>
 </template>
